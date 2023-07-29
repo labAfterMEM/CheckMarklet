@@ -1,0 +1,10 @@
+.popup-handler{
+  > button:first-child{
+    &:hover,
+    &.focus{
+      + .popup-content{
+        display: block;
+      }
+    }
+  }
+}

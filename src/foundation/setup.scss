@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@use './foundation.scss';
+@use '../service/functions';
+
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  word-break: break-all;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background: #ffffff;
+  color: #222;
+  font-size: 16px;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,"メイリオ", Meiryo, sans-serif;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+button *{
+  pointer-events: none;
+}
+select{
+  cursor: pointer;
+}
+
+.g-p-none{
+  padding: 0 !important;
+}
+.g-mr-1em{
+  margin-right: 1em !important;
+}
+.g-center-flex{
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+}
+.g-text-center{
+  text-align: center;
+}
+
+.g-text-link{
+  a{
+    &:hover,
+    &:focus{
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+  }
+}
+
+.g-sp-hidden{
+  @include functions.mq(sp){
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+.g-pc-hidden{
+  @include functions.mq(tab-pc){
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.g-scroll-table-wrap{
+  overflow-x: auto;
+}
